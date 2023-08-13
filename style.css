@@ -1,0 +1,138 @@
+body{
+    background:url("https://images.unsplash.com/photo-1682775639662-b19cc8fcce03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80") no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+h3{
+    position: fixed;
+    top: 1rem;
+    /* text-align: center; */
+    color: #000;
+    font: 500 36px/20px sans-serif;
+}
+
+
+.container{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font: 1.4rem sans-serif;
+}
+
+.bg-circle{
+    width: 100%;
+    height: 100%;
+    background-color: #010f1c;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.gradient-circle{
+    background: conic-gradient(
+        #00FFCA 0%,
+        #00FFCA 40%,
+        #fff 40%,
+        #fff 60%,
+        #0A4D68 60%,
+        #0A4D68 100%
+    );
+    width: 320px;
+    height: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pointer-container{
+    height: 190px;
+    width: 20px;
+    top: -40px;
+    transform-origin: bottom;
+    position: absolute;
+    animation: rotation 7.5s linear infinite;
+}
+
+
+.pointer-circle{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.grow{
+    animation: grow 3s linear forwards;
+}
+
+.shrink{
+    animation: shrink 3s linear;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+
+}
+
+
+@keyframes shrink{
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 4px solid black;
+
+}
+
+.bg-circle{
+    width: 100%;
+    height: 100%;
+    background-color: #010f1c;
+    border-radius: 50%;
+    position: absolute;
+} */
